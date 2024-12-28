@@ -1,20 +1,19 @@
-# Project Data Analysis for Retail: Sales Performance Report
+# Project Data Analysis for Retail: Sales Performance Report 📊💸
 
 Repository ini berisi study case menggunakan dataset `dqlab_sales_store`. Tujuan dari project ini adalah untuk menganalisis dan mengeksplorasi berbagai aspek dari data penjualan, termasuk segmentasi pelanggan, performa penjualan, dan wawasan bisnis.
 
-## Daftar Isi
+## Daftar Isi 📃
 1. [Deskripsi Project](#deskripsi-project)
 2. [Deskripsi Dataset](#deskripsi-dataset)
-3. [Case Study Questions](#case-study-questions)
-4. [Kesimpulan](#kesimpulan)
+3. [Case Study Questions and Insight](#case-study-questions-and-insight)
    
-## Deskripsi Project
+## Deskripsi Project 📄
 Proyek ini adalah study case dari **DQLAB Academy** (academy.dqlab.id) yang bertujuan untuk melakukan analisis data dan business intelligence pada dataset `dqlab_sales_store`. Proyek ini mengajak peserta untuk memahami dan menganalisis berbagai aspek dari data penjualan yang diberikan, seperti segmentasi pelanggan, performa penjualan, serta dampak diskon dan kategori produk terhadap hasil penjualan.
 
+## Deskripsi Dataset 💾
+![image](https://github.com/user-attachments/assets/15390881-04bc-46a6-9dbd-ac2db4972a72)
 
-## Deskripsi Dataset
 Dataset `dqlab_sales_store` memiliki kolom-kolom sebagai berikut:
-
 - **order_id**: Nomor unik untuk setiap order.
 - **order_status**: Status dari order (misalnya selesai, dikembalikan).
 - **customer**: Nama pelanggan.
@@ -26,7 +25,7 @@ Dataset `dqlab_sales_store` memiliki kolom-kolom sebagai berikut:
 - **product_category**: Kategori produk.
 - **product_sub_category**: Subkategori dari produk.
 
-# Case Study Questions
+# Case Study Questions and Insight 💡
 
 ## Chapter 1 - DQLab Store Overall Performance
 **1. Overall Performance by Year** \
@@ -44,8 +43,9 @@ GROUP BY 1
 ORDER BY 1;
 ~~~~
 **KEY STEPS**
-- step 1
-- step 2
+- Ambil tahun pada kolom `order_date` menggunakan **YEAR()**, jumlah semua **SUM()** kolom `sales`, hitung banyaknya data pada kolom `order_id`.
+- Filter untuk memilih `order_status` dengan kondisi "Order Finished".
+- **GROUP BY** `years` untuk mengelompokkan berdasarkan tahun.
 
 **Result**
 |years|sales|number_of_order|
@@ -56,7 +56,8 @@ ORDER BY 1;
 |2012|4482983158|1254|
 
 **Insight**
-- insight
+- Sales terbanyak ada pada tahun 2009 yaitu sebesar Rp 4.613.872.681.
+- Order terbanyak ada pada tahun 2012 yaitu sebanyak 1254 order.
 
 **2. Overall Performance by Product Sub Category** \
 Buatlah Query dengan menggunakan SQL untuk mendapatkan total penjualan (sales) berdasarkan sub category dari produk (product_sub_category) pada tahun 2011 dan 2012 saja (years). 
@@ -72,11 +73,11 @@ WHERE order_status = "Order Finished"
 GROUP BY 1,2
 HAVING years = 2011 or years = 2012
 ORDER BY 1,3 DESC
-LIMIT 10; -- Membatasi hasil hanya 10 baris
+LIMIT 10; -- Membatasi hasil hanya 10 baris, karena terlalu banyak
 ~~~~
 **KEY STEPS**
-- step 1
-- step 2
+- Menjumlahkan seluruh `sales` lalu mengelompokkan berdasarkan kolom `years` dan `product_sub_category`.
+- Filter kondisi dengan `HAVING` dimana hanya pada tahun 2011 dan 2012.
 
 **Result**
 |years|product_sub_category|sales|
@@ -93,7 +94,8 @@ LIMIT 10; -- Membatasi hasil hanya 10 baris
 |2011|Bookcases|169304620|
 
 **Insight**
-- insight
+- Pada tahun 2011, sales terbanyak berasal dari sub-produk-kategori Chairs & Chairmats, sebanyak 622962720.
+- Pada tahun 2012, sales terbanyak berasal dari sub-produk-kategori Office Machines, sebanyak 811427140.
 
 ## Chapter 2 - Promotion Effectiveness and Efficiency by Years
 **1. DQLab Store Promotion Effectiveness and Efficiency** \
@@ -122,8 +124,9 @@ ORDER by years
 LIMIT 10) year_sales;
 ~~~~
 **KEY STEPS**
-- step 1
-- step 2
+- Buat Derived Tables untuk mengetahui jumlah sales dan jumlah promotion value berdasarkan tiap tahunnya.
+- Membuat kueri untuk mengetahui burn rate percentage tiap tahunnya dengan cara membagi `promotion_value` dengan `sales` lalu dikali 100.
+- **ROUND()** digunakan untuk membulatkan desimal ke 2 angka dibelakang koma.
 
 **Result**
 |years|sales|promotion_value|burn_rate_percentage|
@@ -134,12 +137,14 @@ LIMIT 10) year_sales;
 |2012|4482983158|225867642|5.04|
 
 **Insight**
-- insight
+- Burn rate terendah ada pada tahun 2009 yaitu 4.65%.
+- Burn rate tertinggi ada pada tahun 2011 yaitu 5.22%.
+- Namun, dari tahun 2009 hingga tahun 2012 tidak ada satupun tahun yang memenuhi ekspektasi DQLab yaitu burn rate dibawah 4.5%.
 
 **2. Promotion Effectiveness and Efficiency by Product Sub Category** \
 Pada bagian ini kita akan melakukan analisa terhadap efektifitas dan efisiensi dari promosi yang sudah dilakukan selama ini seperti pada bagian sebelumnya. 
 Akan tetapi, ada kolom yang harus ditambahkan, yaitu : product_sub_category dan product_category.
-- Data yang ditampilkan hanya untuk tahun 2012
+- Data yang ditampilkan hanya untuk tahun 2012.
 
 **Query**
 ~~~~sql
@@ -163,8 +168,9 @@ WHERE years = 2012
 ORDER BY 4 DESC;
 ~~~~
 **KEY STEPS**
-- step 1
-- step 2
+- Buat Derived Tables untuk mengabil tahun, product_sub_category, product_sub_category, jumlah seluruh sales, jumlah seluruh promotion value.
+- Lalu, mencaritahu kembali burn rate percentage nya dengan kueri **ROUND((promotion_value/sales)*100,2) AS burn_rate_percentage**.
+- **ROUND()** digunakan untuk membulatkan desimal ke 2 angka dibelakang koma.
 
 **Result**
 |years|product_sub_category|product_category|sales|promotion_value|burn_rate_percentage|
@@ -188,7 +194,11 @@ ORDER BY 4 DESC;
 |2012|Rubber Bands|Office Supplies|3837880|117324|3.06|
 
 **Insight**
-- insight
+- Jika melihat burn rate hanya pada tiap tahun, tidak ada satupun yang memenuhi. Namun kondisi menarik ketika burn rate diketahui untuk setiap kategori.
+- Terdapat 3 kategori yang kategori burn rate dibawah 4.5%.
+- Pada kategori Furniture, burn rate pada sub kategori Chairs & Chairmats ada pada angka 4.07%, sementara itu kategori Tables ada di angka 4.2%
+- Pada kategori Technology, burn rate pada sub kategori Telephones & Communication ada pada angka 4.45%.
+- Pada kategori Office Supplies, burn rate pada sub kategori Envelopes ada di angka 3.98% dan kategori 3.06% ada di Rubber Bands.
 
 ## Chapter 3 - Customer Analytics
 **1. Customers Transactions per year** \
@@ -208,8 +218,9 @@ ORDER BY 1
 LIMIT 100;
 ~~~~
 **KEY STEPS**
-- step 1
-- step 2
+- Hitung data yang unik agar tidak menghitung duplikasi pada kolom `customer` untuk mengitung banyak customer.
+- Lalu kembali menggunakan filter kondisi dimana **order_status = "Order Finished"**, untuk memilih order yang berhasil saja.
+- **GROUP BY** `years` untuk mengetahui banyak customer tiap tahunnya.
 
 **Result**
 |years|number_of_customer|
@@ -219,6 +230,6 @@ LIMIT 100;
 |2011|581|
 |2012|594|
 
-
-## Kesimpulan
-- kesimpulan
+**Insight**
+- Pada tiap tahunnya, jumlah customer yang bertransaksi tidak menentu, namun terlihat sedikit pola yang naik turun.
+- Puncaknya terjadi pada tahun 2012 yaitu sebanyak 594 customer, hanya tipis 1 customer dari tahun 2010 yaitu sebanyak 593 customer.
