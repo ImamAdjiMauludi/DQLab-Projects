@@ -3,9 +3,14 @@
 Repository ini berisi study case menggunakan dataset `dqlab_sales_store`. Tujuan dari project ini adalah untuk menganalisis dan mengeksplorasi berbagai aspek dari data penjualan, termasuk segmentasi pelanggan, performa penjualan, dan wawasan bisnis.
 
 ## Daftar Isi 📃
-1. [Deskripsi Project](#deskripsi-project)
-2. [Deskripsi Dataset](#deskripsi-dataset)
-3. [Case Study Questions and Insight](#case-study-questions-and-insight)
+- [Project Data Analysis for Retail: Sales Performance Report 📊💸](#project-data-analysis-for-retail-sales-performance-report-)
+  - [Daftar Isi 📃](#daftar-isi-)
+  - [Deskripsi Project 📄](#deskripsi-project-)
+  - [Deskripsi Dataset 💾](#deskripsi-dataset-)
+- [Case Study Questions and Insight 💡](#case-study-questions-and-insight-)
+  - [Chapter 1 - DQLab Store Overall Performance](#chapter-1---dqlab-store-overall-performance)
+  - [Chapter 2 - Promotion Effectiveness and Efficiency by Years](#chapter-2---promotion-effectiveness-and-efficiency-by-years)
+  - [Chapter 3 - Customer Analytics](#chapter-3---customer-analytics)
    
 ## Deskripsi Project 📄
 Proyek ini adalah study case dari **DQLAB Academy** (academy.dqlab.id) yang bertujuan untuk melakukan analisis data dan business intelligence pada dataset `dqlab_sales_store`. Proyek ini mengajak peserta untuk memahami dan menganalisis berbagai aspek dari data penjualan yang diberikan, seperti segmentasi pelanggan, performa penjualan, serta dampak diskon dan kategori produk terhadap hasil penjualan.
