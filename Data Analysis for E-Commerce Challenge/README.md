@@ -25,7 +25,7 @@ Chapter melengkapi dan membuat kode SQL dikerjakan dengan menulis kode SQL agar 
 
 ## Deskripsi Dataset 💾
 
-(gambar ERD) soon
+![image](https://github.com/user-attachments/assets/7a097d16-6638-4bca-a911-dc51a96a54b4)
 
 Ada 4 tabel yang tersedia:
 
@@ -125,8 +125,8 @@ Membuat index pada 3 tabel tersebut untuk mempercepat proses query karena baris 
 # Case Study Task and Insight 💡
 
 ## Chapter 1 - Data
-
-Link to Case 🔗👉 SOON
+Dataset berasal dari DQLab. Pada Chapter ini data akan di-eksplorasi lebih lanjut dalam 10 pertanyaan untuk mendapat insight dari dataset yang tersedia.\
+Link to Case 🔗👉 [Chapter 1 - Data](https://github.com/ImamAdjiMauludi/DQLab-Projects/blob/125ee028b57cd8eaeb23073b82d6bf42a1a83e8f/Data%20Analysis%20for%20E-Commerce%20Challenge/Chapter%201%20-%20Data.md)
 
 ## Chapter 2 - Melengkapi SQL
 
