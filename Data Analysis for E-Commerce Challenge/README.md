@@ -3,7 +3,6 @@
 Dataset yang digunakan merupakan data dari DQLab Store yang merupakan e-commerce dimana pembeli dan penjual saling bertemu. Pengguna bisa membeli barang dari pengguna lain yang berjualan. Setiap pengguna bisa menjadi pembeli sekaligus penjual.
 
 ## Daftar Isi 📃
-
 - [Data Analysis for E-Commerce Challenge 💻🛍️](#data-analysis-for-e-commerce-challenge-️)
   - [Daftar Isi 📃](#daftar-isi-)
   - [Deskripsi Project 📄](#deskripsi-project-)
@@ -14,6 +13,7 @@ Dataset yang digunakan merupakan data dari DQLab Store yang merupakan e-commerce
   - [Chapter 1 - Data](#chapter-1---data)
   - [Chapter 2 - Melengkapi SQL](#chapter-2---melengkapi-sql)
   - [Chapter 3 - Membuat SQL](#chapter-3---membuat-sql)
+- [Dashboard 📊](#dashboard-)
 
 ## Deskripsi Project 📄
 
@@ -130,8 +130,11 @@ Link to Case 🔗👉 [Chapter 1 - Data](https://github.com/ImamAdjiMauludi/DQLa
 
 ## Chapter 2 - Melengkapi SQL
 
-Link to Case 🔗👉 SOON
+Link to Case 🔗👉 [Chapter 2 - Melengkapi SQL](https://github.com/ImamAdjiMauludi/DQLab-Projects/blob/da340a916134b46101ea85ef16f81526acd14747/Data%20Analysis%20for%20E-Commerce%20Challenge/Chapter%202%20-%20Melengkapi%20SQL.md)
 
 ## Chapter 3 - Membuat SQL
 
-Link to Case 🔗👉 SOON
+Link to Case 🔗👉 [Chapter 3 - Membuat SQL ](https://github.com/ImamAdjiMauludi/DQLab-Projects/blob/da340a916134b46101ea85ef16f81526acd14747/Data%20Analysis%20for%20E-Commerce%20Challenge/Chapter%203%20-%20Membuat%20SQL.md)
+
+# Dashboard 📊
+SOON
